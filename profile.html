@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The best mini-game bot for discord. Play alone or with your friends to the bot with the greatest amount of minigames in the world ! Page: Profile">
+    <meta name="keywords" content="bot,discord,tinygames,robot,french,mini,games,minigames,play">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="author" content="Du Cassoulet">
+    <meta data-react-helmet="true" property="og:site_name" content="Tiny Games">
+    <meta content="The best mini-game bot for discord. Play alone or with your friends to the bot with the greatest amount of minigames in the world ! Page: Profile" property="og:description">
+    <meta content="https://tiny-games.fr/" property="og:url">
+    <meta name="twitter:card" content="https://tiny-games.fr/images/banner.png">
+    <meta content="#2294ed" data-react-helmet="true" name="theme-color">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="shortcut icon" href="https://tiny-games.fr/images/tinygames.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/f47d1d8c26.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="/js/time.js"></script>
+    <script defer src="/js/nav.js"></script>
+    <script src="/js/footer.js"></script>
+    <script defer src="/js/classes.js"></script>
+    <script defer src="/js/profile.js"></script>
+    <title>Tiny Games | Profile</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <p class="bot-name nav-side">
+        <img class="bot-icon" id="bot-icon" src="https://i.imgur.com/oqTiEKQ.png">
+        <a class="bot-name-content" id="bot-username" href="/"></a>
+      </p>
+      <form class="searchbar" id="nav-searchbar">
+        <input
+          type="text"
+          name="query"
+          class="search-field"
+          id="search-field"
+          spellcheck="false"
+          placeholder="Search Something..."
+          autocomplete="off"
+        >
+        <button class="search-button" type="submit"><i class="fas fa-search"></i></button>
+        <div class="suggestions" id="nav-suggestions" hidden>
+          <div class="suggestion-type" id="suggestion-profiles" data-number="0" data-type="Profiles"></div>
+          <div class="suggestion-type" id="suggestion-commands" data-number="0" data-type="Commands"></div>
+          <div class="suggestion-type" id="suggestion-pages" data-number="0" data-type="Pages"></div>
+          <div class="suggestion-type" id="suggestion-guilds" data-number="0" data-type="Servers"></div>
+        </div>
+      </form>
+      <div class="user-info nav-side" id="user-info">
+        <a href="/premium" class="premium-button" id="premium-button">
+          <img src="/images/crown.png" alt="crown" class="premium-icon">
+          <p class="premium-text">Premium</p>
+        </a>
+        <div class="phone-searchbar">
+          <button class="search-button phone" id="phone-search-button"><i class="fas fa-search"></i></button>
+          <div class="searchbar phone" id="phone-nav-searchbar">
+            <input
+              type="text"
+              name="query"
+              class="search-field phone active"
+              id="phone-search-field"
+              spellcheck="false"
+              placeholder="Search Something..."
+              autocomplete="off"
+            >
+          </div>
+          <div class="suggestions phone" id="phone-nav-suggestions" hidden>
+            <div class="suggestion-type phone" id="phone-suggestion-profiles" data-number="0" data-type="Profiles"></div>
+            <div class="suggestion-type phone" id="phone-suggestion-commands" data-number="0" data-type="Commands"></div>
+            <div class="suggestion-type phone" id="phone-suggestion-pages" data-number="0" data-type="Pages"></div>
+            <div class="suggestion-type phone" id="phone-suggestion-guilds" data-number="0" data-type="Servers"></div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="background"></div>
+    <main class="page-content">
+      <div class="page-main">
+        <section class="box row">
+          <div class="side-details" id="side-details">
+            <img src="/images/discord.png" alt="user avatar" class="user-avatar-side" id="class-image">
+            <p class="sidebar-text" id="user-created-at"></p>
+            <p class="sidebar-text" id="last-time-played"></p>
+            <p class="sidebar-text" id="user-rank"></p>
+          </div>
+          <div class="profile-details">
+            <div class="profile-header" id="profile-header">
+              <img src="/images/discord.png" alt="user avatar" class="user-avatar-profile" id="profile-image">
+              <p class="profile-title" id="profile-title"></p>
+            </div>
+            <div class="box-item">
+              <div class="category-header">
+                <img src="/images/level-up.png" alt="level-up icon" class="category-icon" style="width: 25px; height: 25px;">
+                <p class="category-title">Leveling</p>
+              </div>
+              <div class="level-content">
+                <div class="leveling-textual-info">
+                  <p class="leveling-info" id="user-xp"></p>
+                  <p class="leveling-info" id="user-level"></p>
+                </div>
+                <div class="progress-bar"><div class="progression" id="level-progression"></div></div>
+              </div>
+            </div>
+            <div class="box-item">
+              <div class="category-header">
+                <img src="/images/token.png" alt="token icon" class="category-icon">
+                <p class="category-title">Tokens</p>
+              </div>
+              <div class="token-list">
+                <div class="token-type">
+                  <img src="/images/donut.png" alt="tiny donut icon" class="token-icon">
+                  <p class="token-value" id="token-value-donuts"></p>
+                  <p class="token-name">Donuts</p>
+                </div>
+                <div class="token-type">
+                  <img src="/images/heart.png" alt="tiny heart icon" class="token-icon">
+                  <p class="token-value" id="token-value-hearts"></p>
+                  <p class="token-name">Hearts</p>
+                </div>
+                <div class="token-type">
+                  <img src="/images/star.png" alt="tiny star icon" class="token-icon">
+                  <p class="token-value" id="token-value-stars"></p>
+                  <p class="token-name">Stars</p>
+                </div>
+              </div>
+            </div>
+            <div class="box-item">
+              <div class="category-header">
+                <img src="/images/increase.png" alt="progression icon" class="category-icon">
+                <p class="category-title">Tiny Points</p>
+                <p class="tp-number" id="tp-number"></p>
+              </div>
+              <canvas class="category-chart" id="progression-chart"></canvas>
+            </div>
+            <div class="box-item" id="server-stats-container">
+              <div class="server-item" id="global-server-item">
+                <button class="server-header" id="global-server-header">
+                  <img src="/images/slash.png" alt="global server icon" class="server-icon">
+                  <p class="server-title">Global</p>
+                  <i class="fas fa-caret-down"></i>
+                </button>
+                <div class="server-content" id="global-server-data">
+                  <p class="games-played" id="global-games-played"></p>
+                  <canvas class="stats-progressions" id="global-stats-progression"></canvas>
+                </div>
+              </div>
+            </div>
+            <div class="box-item" id="favorite-game">
+              <div class="category-header">
+                <img src="/images/mushroom.png" alt="mushroom icon" class="category-icon">
+                <p class="category-title">Most played games</p>
+                <div class="guilds-filter hidden" id="guilds-filter">
+                  <button class="selected-guild" id="selected-guild">
+                    <img src="/images/slash.png" alt="global icon" class="guild-filter-icon" id="selected-filter-icon">
+                    <p class="guild-filter-name" id="selected-filter-name">Global</p>
+                    <i class="fas fa-caret-down"></i>
+                  </button>
+                  <div class="guild-filter-container" id="guild-filter-container">
+                    <button class="guild-filter" id="guild-filter-global">
+                      <img src="/images/slash.png" alt="global icon" class="guild-filter-icon">
+                      <p class="guild-filter-name">Global</p>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <canvas class="category-chart" id="played-games-chart"></canvas>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer class="page-footer">
+        <div class="footer-slot">
+          <div class="bot-details">
+            <img src="/images/discord.png" alt="tiny games icon" class="bot-avatar" id="bot-avatar-footer">
+            <p class="bot-username" id="bot-name-footer"></p>
+          </div>
+          <p class="bot-description">Tiny Games is the best mini-game bot for discord, play alone or with your friends !</p>
+          <div class="theme-picker" id="theme-picker"></div>
+        </div>
+        <div class="footer-slot row">
+          <div class="footer-links">
+            <p class="footer-item-title">Util links</p>
+            <a href="https://top.gg/bot/878580419736506388/vote" class="footer-page" target="_blank">Vote</a>
+            <a href="/premium" class="footer-page">Premium</a>
+            <a href="/commands" class="footer-page">Command list</a>
+            <a href="/leaderboards" class="footer-page">Leaderboards</a>
+            <a href="https://discord.gg/KGvg466yHH" class="footer-page" target="_blank">Support server</a>
+          </div>
+          <div class="footer-links">
+            <p class="footer-item-title">Information links</p>
+            <a href="/privacy-policy" class="footer-page">Privacy policy</a>
+            <a href="/terms-of-service" class="footer-page">Terms of service</a>
+            <a href="https://stats.uptimerobot.com/mnEk6cp2ow" class="footer-page" target="_blank">Bot status</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

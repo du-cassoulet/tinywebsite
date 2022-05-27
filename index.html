@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The best mini-game bot for discord. Play alone or with your friends to the bot with the greatest amount of minigames in the world ! Page: Home">
+    <meta name="keywords" content="bot,discord,tinygames,robot,french,mini,games,minigames,play">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="author" content="Du Cassoulet">
+    <meta content="Tiny games home" property="og:title">
+    <meta data-react-helmet="true" property="og:site_name" content="Tiny Games">
+    <meta content="The best mini-game bot for discord. Play alone or with your friends to the bot with the greatest amount of minigames in the world ! Page: Home" property="og:description">
+    <meta content="https://tiny-games.fr/" property="og:url">
+    <meta content="https://tiny-games.fr/images/tinygames.png" property="og:image">
+    <meta name="twitter:card" content="https://tiny-games.fr/images/banner.png">
+    <meta content="#2294ed" data-react-helmet="true" name="theme-color">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="shortcut icon" href="https://tiny-games.fr/images/tinygames.png" type="image/x-icon">
+    <script>(function(h,e,a,t,m,p){m=e.createElement(a);m.async=!0;m.src=t;p=e.getElementsByTagName(a)[0];p.parentNode.insertBefore(m,p);})(window,document,'script','https://u.heatmap.it/log.js');</script>
+    <script src="https://kit.fontawesome.com/f47d1d8c26.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
+    <script defer src="/js/nav.js"></script>
+    <script src="/js/footer.js"></script>
+    <script defer src="/js/main.js"></script>
+    <title>Tiny Games | Home</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <p class="bot-name nav-side">
+        <img class="bot-icon" id="bot-icon" src="https://i.imgur.com/oqTiEKQ.png">
+        <a class="bot-name-content" id="bot-username" href="/"></a>
+      </p>
+      <form class="searchbar" id="nav-searchbar">
+        <input
+          type="text"
+          name="query"
+          class="search-field"
+          id="search-field"
+          spellcheck="false"
+          placeholder="Search Something..."
+          autocomplete="off"
+        >
+        <button class="search-button" type="submit"><i class="fas fa-search"></i></button>
+        <div class="suggestions" id="nav-suggestions" hidden>
+          <div class="suggestion-type" id="suggestion-profiles" data-number="0" data-type="Profiles"></div>
+          <div class="suggestion-type" id="suggestion-commands" data-number="0" data-type="Commands"></div>
+          <div class="suggestion-type" id="suggestion-pages" data-number="0" data-type="Pages"></div>
+          <div class="suggestion-type" id="suggestion-guilds" data-number="0" data-type="Servers"></div>
+        </div>
+      </form>
+      <div class="user-info nav-side" id="user-info">
+        <a href="/premium" class="premium-button" id="premium-button">
+          <img src="/images/crown.png" alt="crown" class="premium-icon">
+          <p class="premium-text">Premium</p>
+        </a>
+        <div class="phone-searchbar">
+          <button class="search-button phone" id="phone-search-button"><i class="fas fa-search"></i></button>
+          <div class="searchbar phone" id="phone-nav-searchbar">
+            <input
+              type="text"
+              name="query"
+              class="search-field phone active"
+              id="phone-search-field"
+              spellcheck="false"
+              placeholder="Search Something..."
+              autocomplete="off"
+            >
+          </div>
+          <div class="suggestions phone" id="phone-nav-suggestions" hidden>
+            <div class="suggestion-type phone" id="phone-suggestion-profiles" data-number="0" data-type="Profiles"></div>
+            <div class="suggestion-type phone" id="phone-suggestion-commands" data-number="0" data-type="Commands"></div>
+            <div class="suggestion-type phone" id="phone-suggestion-pages" data-number="0" data-type="Pages"></div>
+            <div class="suggestion-type phone" id="phone-suggestion-guilds" data-number="0" data-type="Servers"></div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="background"></div>
+    <main class="page-content">
+      <div class="page-main">
+        <section class="bot-presentation">
+          <h1 class="bot-title">Tiny Games,<br>the best mini-game discord bot</h1>
+          <p class="bot-details">
+            Tiny Games is a 100% mini-games discord bot, it has the geatest amount of games in the world.<br>Play alone or with your friends to the best mini-games !
+          </p>
+          <div class="main-buttons">
+            <button class="main-button add-bot" id="add-bot">Add to discord</button>
+            <button class="main-button see-commands" id="see-commands">Browse commands</button>
+          </div>
+          <div class="bot-main-categories">
+            <div class="bot-main-category">
+              <i class="fas fa-gamepad"></i>
+              <div class="bot-main-category-name">Mini-Games</div>
+            </div>
+            <div class="bot-main-category">
+              <i class="fas fa-money-bill"></i>
+              <div class="bot-main-category-name">Economy</div>
+            </div>
+            <div class="bot-main-category">
+              <i class="fas fa-level-up-alt"></i>
+              <div class="bot-main-category-name">Leveling</div>
+            </div>
+            <div class="bot-main-category">
+              <i class="fas fa-cubes"></i>
+              <div class="bot-main-category-name">Customization</div>
+            </div>
+          </div>
+        </section>
+        <section class="main-banner main-servers" id="first-servers-container"></section>
+        <section class="support-server">
+          <widgetbot
+            server="886602749280657448"
+            channel="970998886036561980"
+            width="100%"
+            height="600"
+          ></widgetbot>
+          <div class="support-server-adventages">
+            <h2 class="support-server-title">Support Server</h2>
+            <p class="support-server-description">The support server allows you to:</p>
+            <ul class="support-server-list">
+              <li class="support-server-item"><i class="fas fa-gift"></i>Participate to giveaways</li>
+              <li class="support-server-item"><i class="fas fa-life-ring"></i>Get help about some features</li>
+              <li class="support-server-item"><i class="fas fa-hands-helping"></i>Ask for partnerships</li>
+              <li class="support-server-item"><i class="fas fa-calendar-alt"></i>Participate to official events</li>
+              <li class="support-server-item"><i class="fas fa-comment-medical"></i>Make some suggestions</li>
+              <li class="support-server-item"><i class="fas fa-comment-alt"></i>Talk with the community</li>
+            </ul>
+            <a class="support-server-link" href="https://discord.gg/KGvg466yHH" target="_blank">Join server</a>
+          </div>
+        </section>
+        <section class="main-banner bot-stats" id="first-users-container"></section>
+        <section class="data-containers">
+          <div class="data-container">
+            <h2 class="contained-title">Interactions</h2>
+            <p class="container-data" id="commands-number"></p>
+          </div>
+          <div class="data-container">
+            <h2 class="contained-title">Votes</h2>
+            <p class="container-data" id="votes-number"></p>
+          </div>
+          <div class="data-container">
+            <h2 class="contained-title">Servers</h2>
+            <p class="container-data" id="servers-number"></p>
+          </div>
+        </section>
+      </div>
+      <footer class="page-footer">
+        <div class="footer-slot">
+          <div class="bot-details">
+            <img src="/images/discord.png" alt="tiny games icon" class="bot-avatar" id="bot-avatar-footer">
+            <p class="bot-username" id="bot-name-footer"></p>
+          </div>
+          <p class="bot-description">Tiny Games is the best mini-game bot for discord, play alone or with your friends !</p>
+          <div class="theme-picker" id="theme-picker"></div>
+        </div>
+        <div class="footer-slot row">
+          <div class="footer-links">
+            <p class="footer-item-title">Util links</p>
+            <a href="https://top.gg/bot/878580419736506388/vote" class="footer-page" target="_blank">Vote</a>
+            <a href="/premium" class="footer-page">Premium</a>
+            <a href="/commands" class="footer-page">Command list</a>
+            <a href="/leaderboards" class="footer-page">Leaderboards</a>
+            <a href="https://discord.gg/KGvg466yHH" class="footer-page" target="_blank">Support server</a>
+          </div>
+          <div class="footer-links">
+            <p class="footer-item-title">Information links</p>
+            <a href="/privacy-policy" class="footer-page">Privacy policy</a>
+            <a href="/terms-of-service" class="footer-page">Terms of service</a>
+            <a href="https://stats.uptimerobot.com/mnEk6cp2ow" class="footer-page" target="_blank">Bot status</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

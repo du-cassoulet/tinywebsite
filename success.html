@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The best mini-game bot for discord. Play alone or with your friends to the bot with the greatest amount of minigames in the world ! Page: Payment Success">
+    <meta name="keywords" content="bot,discord,tinygames,robot,french,mini,games,minigames,play">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="author" content="Du Cassoulet">
+    <meta content="Tiny games payment success" property="og:title">
+    <meta data-react-helmet="true" property="og:site_name" content="Tiny Games">
+    <meta content="The best mini-game bot for discord. Play alone or with your friends to the bot with the greatest amount of minigames in the world ! Page: Payment Success" property="og:description">
+    <meta content="https://tiny-games.fr/" property="og:url">
+    <meta content="https://tiny-games.fr/images/tinygames.png" property="og:image">
+    <meta name="twitter:card" content="https://tiny-games.fr/images/banner.png">
+    <meta content="#2294ed" data-react-helmet="true" name="theme-color">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="shortcut icon" href="https://tiny-games.fr/images/tinygames.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
+    <script src="https://kit.fontawesome.com/f47d1d8c26.js" crossorigin="anonymous"></script>
+    <script defer src="/js/nav.js"></script>
+    <script src="/js/footer.js"></script>
+    <script defer src="/js/success.js"></script>
+    <title>Tiny Games | Payment Success</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <p class="bot-name nav-side">
+        <img class="bot-icon" id="bot-icon" src="https://i.imgur.com/oqTiEKQ.png">
+        <a class="bot-name-content" id="bot-username" href="/"></a>
+      </p>
+      <form class="searchbar" id="nav-searchbar">
+        <input
+          type="text"
+          name="query"
+          class="search-field"
+          id="search-field"
+          spellcheck="false"
+          placeholder="Search Something..."
+          autocomplete="off"
+        >
+        <button class="search-button" type="submit"><i class="fas fa-search"></i></button>
+        <div class="suggestions" id="nav-suggestions" hidden>
+          <div class="suggestion-type" id="suggestion-profiles" data-number="0" data-type="Profiles"></div>
+          <div class="suggestion-type" id="suggestion-commands" data-number="0" data-type="Commands"></div>
+          <div class="suggestion-type" id="suggestion-pages" data-number="0" data-type="Pages"></div>
+          <div class="suggestion-type" id="suggestion-guilds" data-number="0" data-type="Servers"></div>
+        </div>
+      </form>
+      <div class="user-info nav-side" id="user-info">
+        <a href="/premium" class="premium-button" id="premium-button">
+          <img src="/images/crown.png" alt="crown" class="premium-icon">
+          <p class="premium-text">Premium</p>
+        </a>
+        <div class="phone-searchbar">
+          <button class="search-button phone" id="phone-search-button"><i class="fas fa-search"></i></button>
+          <div class="searchbar phone" id="phone-nav-searchbar">
+            <input
+              type="text"
+              name="query"
+              class="search-field phone active"
+              id="phone-search-field"
+              spellcheck="false"
+              placeholder="Search Something..."
+              autocomplete="off"
+            >
+          </div>
+          <div class="suggestions phone" id="phone-nav-suggestions" hidden>
+            <div class="suggestion-type phone" id="phone-suggestion-profiles" data-number="0" data-type="Profiles"></div>
+            <div class="suggestion-type phone" id="phone-suggestion-commands" data-number="0" data-type="Commands"></div>
+            <div class="suggestion-type phone" id="phone-suggestion-pages" data-number="0" data-type="Pages"></div>
+            <div class="suggestion-type phone" id="phone-suggestion-guilds" data-number="0" data-type="Servers"></div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="background"></div>
+    <main class="page-content">
+      <div class="page-main center-all">
+        <div id="confetti"></div>
+        <img src="/images/check.png" alt="check" class="check">
+        <h1 class="page-main-title">Payment Success !</h1>
+        <h3 class="page-main-description">Successfully purchased Tiny Games Premium</h3>
+        <a href="/" class="return-main colored"><i class="fas fa-reply"></i> Return home</a>
+      </div>
+      <footer class="page-footer">
+        <div class="footer-slot">
+          <div class="bot-details">
+            <img src="/images/discord.png" alt="tiny games icon" class="bot-avatar" id="bot-avatar-footer">
+            <p class="bot-username" id="bot-name-footer"></p>
+          </div>
+          <p class="bot-description">Tiny Games is the best mini-game bot for discord, play alone or with your friends !</p>
+          <div class="theme-picker" id="theme-picker"></div>
+        </div>
+        <div class="footer-slot row">
+          <div class="footer-links">
+            <p class="footer-item-title">Util links</p>
+            <a href="https://top.gg/bot/878580419736506388/vote" class="footer-page" target="_blank">Vote</a>
+            <a href="/premium" class="footer-page">Premium</a>
+            <a href="/commands" class="footer-page">Command list</a>
+            <a href="/leaderboards" class="footer-page">Leaderboards</a>
+            <a href="https://discord.gg/KGvg466yHH" class="footer-page" target="_blank">Support server</a>
+          </div>
+          <div class="footer-links">
+            <p class="footer-item-title">Information links</p>
+            <a href="/privacy-policy" class="footer-page">Privacy policy</a>
+            <a href="/terms-of-service" class="footer-page">Terms of service</a>
+            <a href="https://stats.uptimerobot.com/mnEk6cp2ow" class="footer-page" target="_blank">Bot status</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
